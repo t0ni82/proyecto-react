@@ -1,9 +1,13 @@
 import './Header.css';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+    titulo: string;
+}
+
+const Header: React.FC<HeaderProps> = ({ titulo }) => {
     return (
         <header>
-            <h1>Welcome to React!</h1>
+            <h1>{titulo}</h1>
         </header>
     );
 };
