@@ -1,0 +1,6 @@
+li span {
+  color: green;
+}
+.no-stock span {
+  color: red;
+}

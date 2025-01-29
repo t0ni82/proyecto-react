@@ -18,3 +18,7 @@ main {
   background-color: rgb(195, 187, 144);
   padding: 20px;
 }
+
+.productos li {
+  text-align: left;
+}
