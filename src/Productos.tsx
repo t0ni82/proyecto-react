@@ -3,14 +3,15 @@ import './Productos.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ListaProductos from './components/ListaProductos'
+import { Link } from 'react-router-dom';
 
 
 function Productos() {
   const [likes, setLikes] = React.useState(0);
-  const [title, setTitle] = React.useState("Hola Mundo");
+
 
   useEffect(() => {
-    setTimeout(() => { setTitle("Hola Mundo desde React") }, 4000);
+    //Se ejecuta cuando se monta el componente
   }, []);
 
   function handleClick() {
@@ -20,8 +21,9 @@ function Productos() {
 
   return (
     <>
-      <Header titulo={title} />
+      <Header titulo="Pagina de productos" />
       <main>
+        <Link to="/">Ir a Home</Link>
         <button onClick={handleClick}>Likes {likes}</button>
         <ListaProductos />
         <p>Numero de likes es: {likes}</p>

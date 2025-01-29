@@ -1,12 +1,18 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import Productos from './Productos';
+import NotFound from './NotFound';
 
 const App: React.FC = () => {
     return (
-        <div className="App">
-            <header className="App-header">
-                <h1>Welcome to My React App</h1>
-            </header>
-        </div>
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/productos" element={<Productos />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+        </Router>
     );
 }
 
